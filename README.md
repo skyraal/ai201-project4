@@ -15,13 +15,6 @@ cp .env.example .env   # then paste your GROQ_API_KEY into .env
 python app.py           # runs on http://localhost:5050
 ```
 
-(Port 5050 is used instead of 5000 because macOS's AirPlay Receiver squats on
-port 5000 by default and silently intercepts requests to it.)
-
-If no `GROQ_API_KEY` is set, Signal 1 falls back to a deterministic keyword
-heuristic so the pipeline still runs end-to-end — see `signals.py:_llm_fallback`.
-The evidence in this README was captured with a real Groq key configured.
-
 ## Architecture
 
 ```
